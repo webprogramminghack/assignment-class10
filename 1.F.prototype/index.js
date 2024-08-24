@@ -3,6 +3,17 @@
 // you should not put the method inside the instance, instead, you should put it in the instance's prototype.
 // start coding here
 
+// Step 1: Implement the Book Constructor Function
+function Book(title, author) {
+  this.title = title;
+  this.author = author;
+}
+
+// Step 2: Add the getDetails Method to Book.prototype
+Book.prototype.getDetails = function () {
+  return `${this.title} by ${this.author}`;
+};
+
 // ---------------- don't change the code below ----------------
 // first argument is the title of the book
 // second argument is the author of the book

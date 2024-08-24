@@ -1,8 +1,30 @@
 'use strict';
 
-// start coding here
+// Define the PowerArray class extending the built-in Array
+class PowerArray extends Array {
+  // Method to check if the array is empty
+  isEmpty() {
+    return this.length === 0;
+  }
 
-// ---------------- don't change the code below ----------------
+  // Method to calculate the average of numerical elements
+  average() {
+    if (this.length === 0) return NaN;
+
+    const numbers = this.filter((item) => typeof item === 'number');
+    if (numbers.length === 0) return NaN;
+
+    const sum = numbers.reduce((acc, num) => acc + num, 0);
+    return sum / numbers.length;
+  }
+
+  // Method to get the last element of the array
+  last() {
+    return this.length > 0 ? this[this.length - 1] : undefined;
+  }
+}
+
+// Test PowerArray class
 const arr = new PowerArray(1, 2, 3, 4, 5);
 
 console.log(arr.isEmpty()); // Expected output: false
