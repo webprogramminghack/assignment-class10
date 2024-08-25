@@ -1,6 +1,19 @@
 'use strict';
 
 // start coding here
+class PowerArray extends Array {
+  isEmpty() {
+    return this.length === 0;
+  }
+
+  average() {
+    return this.reduce((sum, el) => sum + el, 0) / this.length;
+  }
+
+  last() {
+    return this[this.length - 1];
+  }
+}
 
 // ---------------- don't change the code below ----------------
 const arr = new PowerArray(1, 2, 3, 4, 5);
