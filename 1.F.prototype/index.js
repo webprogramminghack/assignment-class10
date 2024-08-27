@@ -1,7 +1,16 @@
 'use strict';
-
 // you should not put the method inside the instance, instead, you should put it in the instance's prototype.
 // start coding here
+// Implement the `Book` Constructor Function
+function Book(title, author) {
+  this.title = title;
+  this.author = author;
+}
+
+// Add a Method to `Book.prototype`
+Book.prototype.getDetails = function () {
+  return `${this.title} by ${this.author}`;
+};
 
 // ---------------- don't change the code below ----------------
 // first argument is the title of the book
