@@ -45,3 +45,51 @@ console.log(emptyArr.isEmpty()); // Expected output: true
 console.log(emptyArr.average()); // Expected output: NaN
 console.log(emptyArr.last()); // Expected output: undefined
 ```
+
+# Memperluas Kelas Bawaan di JavaScript
+
+## Tujuan
+
+Pelajari cara memperluas kelas JavaScript bawaan untuk membuat versi yang lebih canggih dan terspesialisasi. Penugasan ini akan fokus pada perluasan kelas `Array` bawaan untuk membuat `PowerArray` khusus yang mencakup fungsionalitas tambahan sambil mempertahankan perilaku array standar.
+
+## Petunjuk
+
+### 1. Memahami Konsep
+
+- **Memperluas Kelas Bawaan**: JavaScript memungkinkan Anda memperluas kelas bawaan seperti `Array`, `String`, `Number`, dll., dengan menggunakan kata kunci `extends`. Hal ini memungkinkan Anda membuat kelas baru yang mewarisi properti dan metode kelas bawaan sambil menambahkan fungsionalitas baru atau mengesampingkan perilaku yang ada.
+- **Metode Khusus**: Dengan menambahkan metode khusus ke kelas yang diperluas, Anda dapat meningkatkan fungsionalitas kelas bawaan untuk memenuhi kebutuhan spesifik.
+
+### 2. Menerapkan Kelas `PowerArray`
+
+Anda akan mengimplementasikan kelas bernama `PowerArray` yang:
+
+- Memperluas kelas `Array` bawaan.
+- Menambahkan metode khusus `isEmpty()` yang mengembalikan `true` jika array tidak memiliki elemen, dan `false` sebaliknya.
+- Menambahkan metode khusus `rata-rata()` yang mengembalikan rata-rata elemen numerik dalam array. Jika array kosong atau tidak berisi angka, array harus mengembalikan `NaN`.
+- Menambahkan metode khusus `last()` yang mengembalikan elemen terakhir array. Jika array kosong, maka array akan menampilkan `tidak terdefinisi`.
+
+### 3. Memanfaatkan Metode Array yang Diwarisi
+
+`PowerArray` Anda harus mempertahankan semua perilaku standar `Array` biasa. Ini berarti Anda harus dapat menggunakan metode seperti `push()`, `pop()`, `map()`, `filter()`, dll., pada instance `PowerArray`.
+
+### 4. Uji Kelas `PowerArray`
+
+Uji kelas `PowerArray` dengan membuat instance dan memanggil metode warisan dan metode kustom.
+
+## Contoh Penggunaan
+
+```javascript
+const arr = PowerArray baru(1, 2, 3, 4, 5);
+
+konsol.log(arr.isEmpty()); // Hasil yang diharapkan: salah
+konsol.log(arr.rata-rata()); // Hasil yang diharapkan: 3
+konsol.log(arr.last()); // Hasil yang diharapkan: 5
+
+arr.push(10);
+konsol.log(arr.last()); // Hasil yang diharapkan: 10
+
+const kosongArr = PowerArray baru();
+konsol.log(emptyArr.isEmpty()); // Hasil yang diharapkan: benar
+console.log(emptyArr.rata-rata()); // Hasil yang diharapkan: NaN
+console.log(emptyArr.last()); // Output yang diharapkan: tidak ditentukan
+```

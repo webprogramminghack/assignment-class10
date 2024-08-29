@@ -2,6 +2,28 @@
 
 // start coding here
 
+class PowerArray extends Array {
+  isEmpty() {
+    return this.length === 0;
+  }
+
+  last() {
+    return this[this.length - 1];
+  }
+
+  average() {
+    const numbers = this.filter(
+      (item) => typeof item === 'number' && !isNaN(item)
+    );
+    if (numbers.length === 0) {
+      return NaN;
+    }
+
+    const sum = numbers.reduce((total, num) => total + num, 0);
+    return sum / numbers.length;
+  }
+}
+
 // ---------------- don't change the code below ----------------
 const arr = new PowerArray(1, 2, 3, 4, 5);
 

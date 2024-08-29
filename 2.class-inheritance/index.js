@@ -2,6 +2,25 @@
 
 // start coding here
 
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  describe() {
+    return `${this.name} is ${this.age}years old`;
+  }
+}
+class Employee extends Person {
+  constructor(name, age, jobTitle) {
+    super(name, age);
+    this.jobTitle = jobTitle;
+  }
+  getJobTitle() {
+    return `Job title is ${this.jobTitle}`;
+  }
+}
+
 // ---------------- don't change the code below ----------------
 const person1 = new Person('Alice', 30);
 console.log(person1.describe()); // Expected output: "Alice is 30 years old"
