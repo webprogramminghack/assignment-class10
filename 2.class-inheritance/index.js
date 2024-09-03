@@ -1,6 +1,25 @@
 'use strict';
 
 // start coding here
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  describe() {
+    return `${this.name} is ${this.age} years old`;
+  }
+}
+
+class Employee extends Person {
+  constructor(name, age, title) {
+    super(name, age);
+    this.title = title;
+  }
+  getJobTitle() {
+    return `Job title is ${this.title}`;
+  }
+}
 
 // ---------------- don't change the code below ----------------
 const person1 = new Person('Alice', 30);
